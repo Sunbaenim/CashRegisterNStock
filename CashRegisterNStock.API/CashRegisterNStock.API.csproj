@@ -15,4 +15,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CashRegisterNStock.BLL\CashRegisterNStock.BLL.csproj" />
+  </ItemGroup>
+
 </Project>
