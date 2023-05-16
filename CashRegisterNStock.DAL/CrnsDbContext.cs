@@ -8,6 +8,8 @@ namespace CashRegisterNStock.DAL
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductOrder> ProductOrders { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         public CrnsDbContext(DbContextOptions<CrnsDbContext> options) : base(options)
         {
@@ -17,6 +19,8 @@ namespace CashRegisterNStock.DAL
         {
             modelBuilder.ApplyConfiguration(new CategoryConfig());
             modelBuilder.ApplyConfiguration(new ProductConfig());
+            modelBuilder.ApplyConfiguration(new ProductOrderConfig());
+            modelBuilder.ApplyConfiguration(new OrderConfig());
         }
     }
 }

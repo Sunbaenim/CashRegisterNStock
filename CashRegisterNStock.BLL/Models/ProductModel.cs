@@ -1,13 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace CashRegisterNStock.DAL.Entities
+namespace CashRegisterNStock.BLL.Models
 {
-    public class Product
+    public class ProductModel
     {
         public required int Id { get; set; }
         public required int CategoryId { get; set; }
-        public required Category Category { get; set; }
         [MaxLength(15)]
         public required string Name { get; set; }
         [MaxLength(15)]

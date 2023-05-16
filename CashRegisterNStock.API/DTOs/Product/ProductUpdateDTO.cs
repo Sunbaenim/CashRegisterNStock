@@ -1,21 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace CashRegisterNStock.DAL.Entities
+namespace CashRegisterNStock.API.DTOs.Product
 {
-    public class Product
+    public class ProductUpdateDTO
     {
-        public required int Id { get; set; }
         public required int CategoryId { get; set; }
-        public required Category Category { get; set; }
         [MaxLength(15)]
         public required string Name { get; set; }
         [MaxLength(15)]
         public required string Description { get; set; }
-        [Column(TypeName = "decimal(5, 2)")]
+        [Column(TypeName = "descimal(5, 2)")]
         public required decimal Price { get; set; }
         public required int Stock { get; set; }
-        [MaxLength(100)]
         public string? ImageUrl { get; set; }
     }
 }
