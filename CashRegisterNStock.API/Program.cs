@@ -38,8 +38,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options => {
     options.AddPolicy("default", builder =>
     {
-        //builder.WithOrigins("http://localhost:4200");
-        builder.AllowAnyOrigin();
+        builder.WithOrigins("http://localhost:4200");
         builder.AllowAnyMethod();
         builder.AllowAnyHeader();
     });
